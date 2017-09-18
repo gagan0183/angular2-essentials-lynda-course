@@ -27,7 +27,7 @@ import { MediaItemService } from './media-item.service';
   ],
   providers: [
     MediaItemService,
-    {provide: list, useValue: lists}
+    {provide: list, useValue: lists} 
   ],
   bootstrap: [
     AppComponent
