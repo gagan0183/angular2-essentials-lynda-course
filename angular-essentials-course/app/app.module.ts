@@ -6,6 +6,7 @@ import { MediaItemFormComponent } from './media-item-form.component';
 import { AppComponent } from  './app.component';
 import { MediaItemComponent } from  './media.component';
 import { MediaItemListComponent } from './media-item-list.component';
+import { list, lists } from './providers';
 import {FavoriteDirective } from './favorite.directive';
 import { CategoryListPipe } from './category-list.pipe';
 import { MediaItemService } from './media-item.service';
@@ -25,7 +26,8 @@ import { MediaItemService } from './media-item.service';
     MediaItemFormComponent
   ],
   providers: [
-    MediaItemService
+    MediaItemService,
+    {provide: list, useValue: lists}
   ],
   bootstrap: [
     AppComponent

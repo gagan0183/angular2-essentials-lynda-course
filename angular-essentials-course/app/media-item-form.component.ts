@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { MediaItemService } from './media-item.service';
+import { list } from './providers';
 
 @Component({
     selector: 'mw-media-item-form',
@@ -10,7 +11,7 @@ import { MediaItemService } from './media-item.service';
 export class MediaItemFormComponent {
   form;
 
-  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService) {
+  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService, @Inject(list) public list) {
   }
 
   ngOnInit() {
